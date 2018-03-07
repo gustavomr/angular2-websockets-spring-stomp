@@ -1,0 +1,7 @@
+com/algaworks/estoque/model/Produto.class
+com/algaworks/estoque/Greeting.class
+com/algaworks/estoque/ArtigoSpringDataJpaApplication.class
+com/algaworks/estoque/repository/Produtos.class
+com/algaworks/estoque/WebSocketConfig.class
+com/algaworks/estoque/HelloMessage.class
+com/algaworks/estoque/controller/ProdutosResource.class

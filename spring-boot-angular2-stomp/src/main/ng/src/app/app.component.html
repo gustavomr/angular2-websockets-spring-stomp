@@ -1,0 +1,49 @@
+<div id="main-content" class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="connect">WebSocket connection:</label>
+          <button id="connect" class="btn btn-default" [disabled]="connected" (click)="connect()">Connect</button>
+          <button id="disconnect" class="btn btn-default" [disabled]="!connected" (click)="disconnect()">Disconnect
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input type="text" id="name" class="form-control" [(ngModel)]="produto.nome" name="nome" placeholder="Your name here...">
+          <label for="name">Descricao</label>
+          <input type="text" id="name" class="form-control" [(ngModel)]="produto.descricao" name="descricao" placeholder="Your name here...">
+          <label for="name">Ativo</label>
+          <input type="text" id="name" class="form-control" [(ngModel)]="produto.ativo" name="ativo" placeholder="true">
+          <label for="name">Quantidade</label>
+          <input type="text" id="name" class="form-control" [(ngModel)]="produto.quantidade" name="quantidade" placeholder="10">
+          <label for="name">Cadastro</label>
+          <input type="text" id="name" class="form-control" [(ngModel)]="produto.cadastro" name="cadastro" placeholder="1425610800000">
+
+        </div>
+        <button id="send" class="btn btn-default" (click)="sendName()">Send</button>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table id="conversation" class="table table-striped">
+        <thead>
+        <tr>
+          <th>Greetings</th>
+        </tr>
+        </thead>
+        <tbody id="greetings">
+        <tr *ngFor="let g of greetings">
+          <td>{{g.id}}</td>
+          <td>{{g.nome}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
