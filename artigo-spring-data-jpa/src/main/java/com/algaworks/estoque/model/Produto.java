@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Version;
+
 
 @Entity
 public class Produto implements Serializable {
@@ -28,6 +30,9 @@ public class Produto implements Serializable {
 	private Date cadastro; 
 	
 	private int quantidade;
+	
+	
+	private long version;
 
 	public Long getId() {
 		return id;
@@ -35,6 +40,15 @@ public class Produto implements Serializable {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	@Version
+	public long getVersion() {
+		return version;
+	}
+
+	public void setVersion(long version) {
+		this.version = version;
 	}
 
 	public String getNome() {
