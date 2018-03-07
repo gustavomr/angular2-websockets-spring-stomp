@@ -1,0 +1,5 @@
+<input  [(ngModel)]="mensagem"  />
+<button (click)="enviar()">Enviar</button>
+<button (click)="desconectar()">Desconectar</button>
+
+<div *ngFor="let m of mensagens"> {{m}}</div>
